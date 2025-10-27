@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern portfolio design system inspired by the reference design
+All colors MUST be HSL for consistency and theming */
+
+@layer base {
+  :root {
+    /* Core theme colors */
+    --background: 0 0% 98%;
+    --foreground: 240 10% 3.9%;
+    
+    /* Card and surface colors */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    
+    /* Brand colors - vibrant orange accent */
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 25 100% 65%;
+    
+    /* Secondary colors */
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    
+    /* Muted colors */
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    
+    /* Accent colors */
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    
+    /* Status colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Border and input */
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 25 95% 53%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme colors inspired by reference design */
+    --background: 240 10% 6%;
+    --foreground: 0 0% 98%;
+    
+    /* Card and surface colors for dark mode */
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* Brand colors remain vibrant in dark mode */
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 25 100% 65%;
+    
+    /* Dark mode secondary */
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    
+    /* Dark mode muted */
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    
+    /* Dark mode accent */
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    
+    /* Dark mode status */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Dark mode borders */
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 25 95% 53%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Portfolio-specific design tokens */
+  :root {
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-radial: radial-gradient(ellipse at center, hsl(var(--primary) / 0.1) 0%, transparent 70%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(var(--foreground) / 0.1);
+    --shadow-elevated: 0 20px 60px -20px hsl(var(--foreground) / 0.2);
+    
+    /* Typography */
+    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    
+    /* Spacing */
+    --section-padding: 5rem 0;
+    --container-padding: 0 1.5rem;
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .dark {
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 20px 60px -20px hsl(0 0% 0% / 0.5);
+  }
+}
+
+@layer components {
+  /* Geometric shapes inspired by reference design */
+  .geometric-shape {
+    @apply absolute pointer-events-none;
+  }
+  
+  .geometric-orange {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+  }
+  
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Text gradients */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  /* Card styles */
+  .card-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  /* Smooth animations */
+  .animate-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .animate-spring {
+    transition: var(--transition-spring);
+  }
+}

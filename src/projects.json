@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Trackly Mobile App",
+    "description": "A comprehensive income and expense management application with intelligent budget categorization, financial analytics, and spending insights.",
+    "tech": ["Kotlin", "Android", "SQLite", "Material Design"],
+    "category": "Mobile App",
+    "icon": "Smartphone",
+    "image": "../assets/Trackly.jpeg",
+    "features": ["Budget Tracking", "Expense Categories", "Financial Reports", "Goal Setting"],
+    "status": "Completed"
+  },
+  {
+    "title": "Agro-Farming Platform",
+    "description": "A digital marketplace connecting farmers directly with buyers, featuring product listings, communication tools, and secure transactions.",
+    "tech": ["Kotlin", "Android", "Firebase", "Google Maps API"],
+    "category": "Mobile App",
+    "icon": "Smartphone",
+    "image": "../assets/AgroFarming.jpeg",
+    "features": ["Farmer-Buyer Connect", "Product Catalog", "Location Services", "Real-time Chat"],
+    "status": "In Progress"
+  },
+  {
+    "title": "Aisle Navigation System",
+    "description": "Full-stack web application for supermarket product location and personalized recommendations with advanced search capabilities.",
+    "tech": ["React.js", "Node.js", "MongoDB", "Express.js"],
+    "category": "Web App",
+    "icon": "Globe",
+    "image": "../assets/AisleNavigation.png",
+    "features": ["Product Search", "Store Navigation", "Recommendations", "Admin Dashboard"],
+    "status": "Completed"
+  },
+  {
+    "title": "Hotel Booking Website",
+    "description": "Responsive hotel booking platform with beautiful UI, booking forms, image galleries, and room management system.",
+    "tech": ["React.js", "Tailwind CSS", "Node.js", "MySQL"],
+    "category": "Web App",
+    "icon": "Globe",
+    "image": "../assets/AisleNavigation.png",
+    "features": ["Room Booking", "Gallery Showcase", "Responsive Design", "Payment Integration"],
+    "status": "Completed"
+  },
+  {
+    "title": "Event & Ticket Management",
+    "description": "Comprehensive online event management system with role-based access control, real-time ticketing, and analytics dashboard.",
+    "tech": ["C#", "ASP.NET MVC", "SQL Server", "Bootstrap"],
+    "category": "Web App",
+    "icon": "Database",
+    "image": "/assets/placeholder.svg",
+    "features": ["Event Management", "Ticket Sales", "Role-based Access", "Analytics"],
+    "status": "In Progress"
+  }
+]
